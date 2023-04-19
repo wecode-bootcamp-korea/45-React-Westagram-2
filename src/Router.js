@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Nav from './components/Nav/Nav';
 
 // 이소진의 컴포넌트
 import LoginSojin from './pages/sojinLee/Login/Login';
@@ -19,6 +20,7 @@ import MainSeungmin from './pages/seungminOh/Main/Main';
 const Router = () => {
   return (
     <BrowserRouter>
+      <Nav />
       <Routes>
         <Route path="/login-sojin" element={<LoginSojin />} />
         <Route path="/main-sojin" element={<MainSojin />} />
