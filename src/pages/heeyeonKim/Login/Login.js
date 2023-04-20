@@ -4,9 +4,6 @@ import { useNavigate } from 'react-router-dom';
 
 const LoginHeeyeon = () => {
   const navigate = useNavigate();
-  const handleLogin = () => {
-    navigate('/main-heeyeon');
-  };
   const [id, setId] = useState('');
   const saveUserId = e => {
     setId(e.target.value);
@@ -14,7 +11,16 @@ const LoginHeeyeon = () => {
 
   const [pw, setPw] = useState();
   const saveUserPw = e => {
+    debugger;
     setPw(e.target.value);
+  };
+
+  const isValid = () => {
+    return id.includes('@') && pw.length >= 5;
+  };
+
+  const handleLogin = () => {
+    navigate('/main-heeyeon');
   };
 
   return (
@@ -36,7 +42,11 @@ const LoginHeeyeon = () => {
               onChange={saveUserPw}
             />
           </div>
-          <button className="login-btn" onClick={handleLogin}>
+          <button
+            className={`login-btn ${isValid() ? 'color-change' : ''}`}
+            disabled={!isValid()}
+            onClick={handleLogin}
+          >
             로그인
           </button>
         </div>
