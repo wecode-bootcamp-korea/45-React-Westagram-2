@@ -9,9 +9,8 @@ const LoginHeeyeon = () => {
     setId(e.target.value);
   };
 
-  const [pw, setPw] = useState();
+  const [pw, setPw] = useState('');
   const saveUserPw = e => {
-    debugger;
     setPw(e.target.value);
   };
 
@@ -34,12 +33,14 @@ const LoginHeeyeon = () => {
               type="text"
               placeholder="전화번호, 사용자 이름 또는 이메일"
               onChange={saveUserId}
+              value={id}
             />
             <input
               className="input-box"
               type="password"
               placeholder="비밀번호"
               onChange={saveUserPw}
+              value={pw}
             />
           </div>
           <button
