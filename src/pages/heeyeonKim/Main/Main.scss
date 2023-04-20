@@ -1,0 +1,360 @@
+.full-page-cover {
+  height: 100vh;
+  background-color: #fafafa;
+
+  .header {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    border-bottom: 1px solid #c2bebe;
+    background-color: white;
+  }
+
+  .main-contents-container {
+    display: flex;
+    justify-content: center;
+    background-color: #fafafa;
+    gap: 32px;
+  }
+}
+
+.header {
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    padding: 16px 16px;
+  }
+
+  .navli1 {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .nav-logo {
+    display: inline-block;
+    padding-top: 6px;
+    text-decoration: none;
+  }
+
+  .logoimg {
+    width: 24px;
+    height: 24px;
+    background-image: url(../../../../public/images/heeyeonKim/instagram.png);
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+  }
+
+  .nav-title {
+    padding-left: 16px;
+    border-left: 1px solid black;
+    font-family: 'Lobster', cursive;
+    font-size: 32px;
+  }
+
+  .input-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    padding: 4px;
+    border: 1px solid #c2bebe;
+    border-radius: 4px;
+  }
+
+  .input-search {
+    width: 100%;
+    padding: 0;
+    border: none;
+    outline: none;
+    background-image: url(../../../../public/images/heeyeonKim/search-interface-symbol.png);
+    background-repeat: no-repeat;
+    background-position: 52px center;
+    background-size: contain;
+    text-align: center;
+    appearance: none;
+
+    &:focus {
+      background-image: none;
+      text-align: left;
+    }
+  }
+}
+
+.nav {
+  .navli3 {
+    display: flex;
+    gap: 24px;
+  }
+
+  .nav-img {
+    width: 24px;
+  }
+}
+
+.main-contents-container {
+  .article-container {
+    padding-top: 56px;
+  }
+
+  .div-right {
+    padding-top: 56px;
+  }
+}
+
+.article-container {
+  .artc-wrapper {
+    border: 1px solid #c2bebe;
+    background-color: white;
+  }
+
+  .artc-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 480px;
+    padding: 12px;
+  }
+
+  .react-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 12px 0 12px;
+  }
+
+  .post-info {
+    display: flex;
+    gap: 8px;
+    padding: 4px 12px 0 12px;
+  }
+
+  .comment-form-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 12px;
+    border-top: 1px solid #c2bebe;
+  }
+}
+
+.artc-header {
+  .artc-profile {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+}
+
+.artc-profile {
+  .personal-profile {
+    width: 40px;
+    border-radius: 50px;
+  }
+}
+
+.react-section {
+  .react-left {
+    display: flex;
+    gap: 16px;
+  }
+}
+
+.react-left {
+  .react-img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.react-right {
+  .react-img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.show-like {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 12px;
+
+  .like-profile {
+    width: 24px;
+    border-radius: 50px;
+  }
+}
+
+.comment-form-wrapper {
+  .comment-box {
+    flex: 1;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    resize: none;
+
+    &::placeholder {
+      color: #c2bebe;
+      font-size: 16px;
+    }
+  }
+
+  .btn-post-comment {
+    border: none;
+    background-color: white;
+    color: #c4e1fb;
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
+
+.div-right {
+  .div-right-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    gap: 24px;
+  }
+
+  .me-profile {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .friends-list-wrapper {
+    border: 1px solid #c2bebe;
+  }
+
+  .text-setting {
+    display: flex;
+    flex-direction: column;
+    padding-right: 52px;
+    line-height: 1.3;
+    gap: 16px;
+  }
+}
+
+.me-profile {
+  &-img {
+    width: 64px;
+    border-radius: 50px;
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+.friends-list-wrapper {
+  .friends-list-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 12px 0 12px;
+  }
+
+  .friends-list {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .friends-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &.follow-replace {
+      justify-content: space-between;
+    }
+  }
+
+  .friends-img {
+    width: 56px;
+    border-radius: 50px;
+  }
+
+  .friends-main-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+.comment-section {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 12px;
+}
+
+.comment-section-left {
+  display: flex;
+  flex: 1;
+  padding: 4px 12px 0 12px;
+  gap: 8px;
+}
+
+.comment-section-comment {
+  max-width: 300px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.comment-heart {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.transparent-heart {
+  width: 16px;
+  height: 16px;
+  background-image: url(../../../../public/images/heeyeonKim/heart.png);
+  background-size: 16px 16px;
+  cursor: pointer;
+}
+
+.red-heart {
+  width: 16px;
+  height: 16px;
+  background-image: url(../../../../public/images/heeyeonKim/reaction_heart.png);
+  background-size: 16px 16px;
+  cursor: pointer;
+}
+
+.img-gap {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-remove {
+  width: auto;
+  border: none;
+  background-color: white;
+  color: #c2bebe;
+
+  &:hover {
+    color: black;
+  }
+}
+
+.show-time {
+  padding: 4px 12px 8px 12px;
+  color: #c2bebe;
+}
+
+.blue-button {
+  color: #499ff1;
+}
+
+.font-color-gray {
+  color: #c2bebe;
+}
+
+.font-color-blue {
+  color: #499ff1;
+}
