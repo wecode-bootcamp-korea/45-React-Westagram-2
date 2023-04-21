@@ -20,7 +20,7 @@ export const Nav = () => {
   return (
     <nav className="nav">
       <div className="navli1">
-        <a href="" className="nav-logo">
+        <a className="nav-logo" href="">
           <div className="logoimg" />
         </a>
         <div className="nav-title">westagram</div>
@@ -130,6 +130,7 @@ export const CommentList = props => {
   );
 };
 
+//댓글
 export const CommentItem = props => {
   const { comment } = props;
 
