@@ -7,6 +7,7 @@ const Login = () => {
 
   const [userId, setUserId] = useState('');
   const [userPassword, setUserPassword] = useState('');
+  const isInputValid = userId.includes('@') && userId.length >= 5;
 
   const saveUserId = event => {
     setUserId(event.target.value);
@@ -19,6 +20,7 @@ const Login = () => {
   const goToMain = () => {
     navigate('/main-sojin');
   };
+
   return (
     <div className="login">
       <h4>WeStagram</h4>
@@ -38,7 +40,12 @@ const Login = () => {
           value={userPassword}
         />
       </div>
-      <button className="loginbtn" onClick={goToMain} type="button">
+      <button
+        type="button"
+        onClick={goToMain}
+        className={isInputValid ? 'buttonlogin' : 'buttonlogindisabled'}
+        disabled={isInputValid ? false : true}
+      >
         로그인
       </button>
       <div className="forgetpassword">
