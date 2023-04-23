@@ -3,28 +3,28 @@ import './Login.scss';
 import { useNavigate } from 'react-router-dom';
 
 const LoginTaewon = () => {
-  const [idState, setIdState] = useState();
-  const [pwState, setPwState] = useState();
+  const [idState, setIdState] = useState('');
+  const [pwState, setPwState] = useState('');
   const [btnState, setBtnState] = useState(false);
 
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    btnState === true ? navigate('/main-taewon') : alert('회원가입하세요');
+    btnState && navigate('/main-taewon');
   };
 
   const saveUserId = e => {
     setIdState(e.target.value);
-    console.log('id :', e.target.value);
+    handleBtn();
   };
 
   const saveUserPw = e => {
     setPwState(e.target.value);
-    console.log('pw :', e.target.value);
+    handleBtn();
   };
 
   const handleBtn = () => {
-    return idState.includes('@') && pwState.length > 5
+    idState.includes('@') && pwState.length >= 5
       ? setBtnState(true)
       : setBtnState(false);
   };
@@ -39,6 +39,7 @@ const LoginTaewon = () => {
             className="id"
             placeholder="전화번호, 사용자 이름 또는 이메일"
             value={idState}
+            onKeyUp={handleBtn}
             onChange={saveUserId}
           />
           <input
@@ -46,13 +47,14 @@ const LoginTaewon = () => {
             className="pw"
             placeholder="비밀번호"
             value={pwState}
+            onKeyUp={handleBtn}
             onChange={saveUserPw}
           />
         </div>
         <button
           type="submit"
-          className={`"login-btn" ${btnState ? 'btn-active' : 'btn-default'}`}
-          disabled={btnState ? 'btnActive' : 'btnDefault'}
+          className={`login-btn ${btnState ? 'btn-active' : 'btn-default'}`}
+          disabled={btnState ? false : true}
           onClick={handleLogin}
         >
           로그인
