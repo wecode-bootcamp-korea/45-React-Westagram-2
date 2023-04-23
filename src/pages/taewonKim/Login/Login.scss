@@ -1,12 +1,12 @@
-@import '/src/styles/variables.scss';
+@import '/src/styles/variables';
 
 .login {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: 100vh;
 
-  .loginContainer {
+  .login-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,14 +16,14 @@
     background-color: #fff;
   }
 
-  .loginLogo {
+  .login-logo {
     height: 100px;
     margin-top: 50px;
     font-size: 70px;
     text-align: center;
   }
 
-  .inputBox {
+  .input-box {
     display: flex;
     flex-direction: column;
     width: 400px;
@@ -41,27 +41,27 @@
     }
   }
 
-  .loginBtn {
+  .login-btn {
     width: 400px;
     height: 45px;
     margin-top: 20px;
     border: 0px;
     border-radius: 5px;
-    color: white;
     background-color: blue;
+    color: white;
     font-size: 21px;
   }
 
-  .btnDefault {
+  .btn-default {
     opacity: 0.3;
   }
 
-  .btnActive {
+  .btn-active {
     opacity: 1;
     cursor: pointer;
   }
 
-  .findPw {
+  .find-pw {
     margin-top: 170px;
     font-size: 15px;
     text-decoration: none;

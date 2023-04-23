@@ -4,94 +4,94 @@ import './Main.scss';
 const MainTaewon = () => {
   return (
     <div className="main">
-      <nav className="navContainer">
-        <div className="navBox">
-          <div className="navLeft">
+      <nav className="nav-container">
+        <div className="nav-box">
+          <div className="nav-left">
             <img
               alt="instagram icon"
-              className="navIcon"
+              className="nav-icon"
               src="images/taewonKim/아이콘.png"
             />
-            <h1 className="feedLogo">Instagram</h1>
+            <h1 className="feed-logo">Instagram</h1>
           </div>
-          <input type="text" placeholder="검색" className="navSearch" />
-          <div className="navRight">
-            <button className="searchBtn">
+          <input type="text" placeholder="검색" className="nav-search" />
+          <div className="nav-right">
+            <button className="search-btn">
               <img
                 src="images/taewonKim/탐색.png"
                 alt="search icon"
-                className="searchIcon"
+                className="search-icon"
               />
             </button>
-            <button className="heartBtn">
+            <button className="heart-btn">
               <img
                 src="images/taewonKim/하트.png"
                 alt="like icon"
-                className="heartIcon"
+                className="heart-icon"
               />
             </button>
-            <button className="mypageBtn">
+            <button className="mypage-btn">
               <img
                 src="images/taewonKim/마이페이지.png"
                 alt="my page"
-                className="mypageIcon"
+                className="mypage-icon"
               />
             </button>
           </div>
         </div>
       </nav>
-      <div className="mainContainer">
+      <div className="main-container">
         <article className="feed">
-          <div className="feedTop">
-            <div className="userInfo">
+          <div className="feed-top">
+            <div className="user-info">
               <img
                 alt="my_photo"
                 className="photo"
                 src="images/taewonKim/user/user1.jpg"
               />
-              <p className="nickName">apple_official</p>
+              <p className="nick-name">apple_official</p>
             </div>
-            <button className="moreBtn">
+            <button className="more-btn">
               <img alt="more" className="more" src="images/taewonKim/dot.svg" />
             </button>
           </div>
-          <div className="feedMain">
+          <div className="feed-main">
             <img
               alt="main_image"
-              className="feedImg"
+              className="feed-img"
               src="images/taewonKim/무지개사과.jpeg"
             />
           </div>
-          <div className="feedBottom">
-            <div className="feedInfoBox">
-              <div className="feedInfoLeft">
-                <button className="feedInfoBtn">
+          <div className="feed-bottom">
+            <div className="feed-info-box">
+              <div className="feed-info-left">
+                <button className="feed-info-btn">
                   <img
                     alt="feed_like_icon"
-                    className="feedLikeIcon"
+                    className="feed-like-icon"
                     src="images/taewonKim/heart.svg"
                   />
                 </button>
-                <button className="feedInfoBtn">
+                <button className="feed-info-btn">
                   <img
                     alt="feed_comment_icon"
-                    className="feedCommentIcon"
+                    className="feed-comment-icon"
                     src="images/taewonKim/comment.svg"
                   />
                 </button>
-                <button className="feedInfoBtn">
+                <button className="feed-info-btn">
                   <img
                     alt="feed_share_icon"
-                    className="feedShareIcon"
+                    className="feed-share-icon"
                     src="images/taewonKim/share.svg"
                   />
                 </button>
               </div>
-              <div className="feedInfoRight">
-                <button className="feedInfoBtn">
+              <div className="feed-info-right">
+                <button className="feed-info-btn">
                   <img
                     alt="feed_bookmark_icon"
-                    className="feedBookmarkIcon"
+                    className="feed-bookmark-icon"
                     src="images/taewonKim/bookmark.svg"
                   />
                 </button>
@@ -103,137 +103,137 @@ const MainTaewon = () => {
                 class="photo"
                 src="images/taewonKim/user/user2.jpg"
               />
-              <p className="nickName">samsung 님이 좋아합니다.</p>
+              <p className="nick-name">samsung 님이 좋아합니다.</p>
             </div>
-            <div className="feedTextBox">
-              <p className="feedText">애플 삼성에 팔거에요!</p>
-              <p className="uploadTime">50분전</p>
+            <div className="feed-text-box">
+              <p className="feed-text">애플 삼성에 팔거에요!</p>
+              <p className="upload-time">50분전</p>
             </div>
-            <div className="postCommentBox">
-              <div className="commentList">
-                <p className="commentUser">steve_jobs</p>
-                <p className="commentText">그러지마!!!</p>
-                <button className="commentLikeBtn">
+            <div className="post-comment-box">
+              <div className="comment-list">
+                <p className="comment-user">steve_jobs</p>
+                <p className="comment-text">그러지마!!!</p>
+                <button className="comment-like-btn">
                   <img
                     alt="like"
                     src="images/taewonKim/commentHeart.svg"
-                    className="commentLikeIcon"
+                    className="comment-like-icon"
                   />
                 </button>
               </div>
             </div>
-            <div className="commentBox">
+            <div className="comment-box">
               <input
                 type="text"
                 placeholder="댓글 달기..."
                 className="comment"
               />
-              <button className="postBtn postBtnDefault">게시</button>
+              <button className="post-btn post-btn-default">게시</button>
             </div>
           </div>
         </article>
-        <div className="feedSub">
-          <div className="subMe">
-            <div className="subMeLeft">
-              <img src="images/taewonKim/user/user3.jpg" className="subImg" />
+        <div className="feed-sub">
+          <div className="sub-me">
+            <div className="sub-me-left">
+              <img src="images/taewonKim/user/user3.jpg" className="sub-img" />
             </div>
-            <div className="subMeRight">
-              <p className="nickName">wecode_bootcamp</p>
+            <div className="sub-me-right">
+              <p className="nick-name">wecode_bootcamp</p>
               <p className="grayfont">WeCode | 위코드</p>
             </div>
           </div>
-          <div className="subStory">
-            <div className="subStoryTop">
+          <div className="sub-story">
+            <div className="sub-story-top">
               <p className="grayfont">스토리</p>
-              <button className="subMore">모두보기</button>
+              <button className="sub-more">모두보기</button>
             </div>
-            <div className="subStoryList">
+            <div className="sub-story-list">
               <div className="user">
                 <img src="images/taewonKim/user/user4.jpg" className="photo" />
-                <div className="nameTime">
-                  <p className="nickName">intel</p>
-                  <p className="uploadTime">15분전</p>
+                <div className="name-time">
+                  <p className="nick-name">intel</p>
+                  <p className="upload-time">15분전</p>
                 </div>
               </div>
               <div class="user">
                 <img src="images/taewonKim/user/user5.jpg" className="photo" />
-                <div className="nameTime">
-                  <p className="nickName">lg</p>
-                  <p className="uploadTime">15분전</p>
+                <div className="name-time">
+                  <p className="nick-name">lg</p>
+                  <p className="upload-time">15분전</p>
                 </div>
               </div>
               <div className="user">
                 <img src="images/taewonKim/user/user6.jpg" className="photo" />
-                <div className="nameTime">
-                  <p className="nickName">google</p>
-                  <p className="uploadTime">15분전</p>
+                <div className="name-time">
+                  <p className="nick-name">google</p>
+                  <p className="upload-time">15분전</p>
                 </div>
               </div>
               <div className="user">
                 <img src="images/taewonKim/user/user7.jpg" className="photo" />
-                <div className="nameTime">
-                  <p className="nickName">facebook</p>
-                  <p className="uploadTime">15분전</p>
+                <div className="name-time">
+                  <p className="nick-name">facebook</p>
+                  <p className="upload-time">15분전</p>
                 </div>
               </div>
               <div className="user">
                 <img src="images/taewonKim/user/user8.jpg" className="photo" />
-                <div className="nameTime">
-                  <p className="nickName">kakao</p>
-                  <p className="uploadTime">15분전</p>
+                <div className="name-time">
+                  <p className="nick-name">kakao</p>
+                  <p className="upload-time">15분전</p>
                 </div>
               </div>
               <div className="user">
                 <img src="images/taewonKim/user/user9.jpg" className="photo" />
-                <div className="nameTime">
-                  <p className="nickName">netflix</p>
-                  <p className="uploadTime">15분전</p>
+                <div className="name-time">
+                  <p className="nick-name">netflix</p>
+                  <p className="upload-time">15분전</p>
                 </div>
               </div>
               <div className="user">
                 <img src="images/taewonKim/user/user10.jpg" className="photo" />
-                <div className="nameTime">
-                  <p className="nickName">tsmc</p>
-                  <p className="uploadTime">15분전</p>
+                <div className="name-time">
+                  <p className="nick-name">tsmc</p>
+                  <p className="upload-time">15분전</p>
                 </div>
               </div>
             </div>
           </div>
-          <div className="subRecommend">
-            <div className="recommendTop">
+          <div className="sub-recommend">
+            <div className="recommend-top">
               <p className="grayfont">회원님을 위한 추천</p>
-              <button className="subMore">모두보기</button>
+              <button className="sub-more">모두보기</button>
             </div>
-            <div className="subRecommendList">
+            <div className="sub-recommend-list">
               <div className="user">
                 <img src="images/taewonKim/user/user11.jpg" className="photo" />
-                <div className="nameTime">
-                  <p className="nickName">amazon</p>
-                  <p className="uploadTime">2명이 좋아합니다.</p>
+                <div className="name-time">
+                  <p className="nick-name">amazon</p>
+                  <p className="upload-time">2명이 좋아합니다.</p>
                 </div>
                 <button className="follow">팔로우</button>
               </div>
 
               <div className="user">
                 <img src="images/taewonKim/user/user12.jpg" className="photo" />
-                <div className="nameTime">
-                  <p className="nickName">meta</p>
-                  <p className="uploadTime">2명이 좋아합니다.</p>
+                <div className="name-time">
+                  <p className="nick-name">meta</p>
+                  <p className="upload-time">2명이 좋아합니다.</p>
                 </div>
                 <button className="follow">팔로우</button>
               </div>
               <div className="user">
                 <img src="images/taewonKim/user/user13.jpg" className="photo" />
-                <div className="nameTime">
-                  <p className="nickName">naver</p>
-                  <p className="uploadTime">2명이 좋아합니다.</p>
+                <div className="name-time">
+                  <p className="nick-name">naver</p>
+                  <p className="upload-time">2명이 좋아합니다.</p>
                 </div>
                 <button className="follow">팔로우</button>
               </div>
             </div>
           </div>
-          <div className="pageInfo">
-            <p className="infoList">
+          <div className="page-info">
+            <p className="info-list">
               Instagram 정보, 지원, 홍보 센터, API,채용
               정보,개인정보처리방침,약관,디렉터리,프로필,해시테그,언어
             </p>
