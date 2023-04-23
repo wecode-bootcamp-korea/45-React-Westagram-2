@@ -94,6 +94,7 @@
 }
 
 .main-contents-container {
+  padding-bottom: 56px;
   .article-container {
     padding-top: 56px;
   }
@@ -151,6 +152,11 @@
     width: 40px;
     border-radius: 50px;
   }
+}
+
+.artc-option {
+  width: 24px;
+  height: 24px;
 }
 
 .react-section {
@@ -299,7 +305,7 @@
 }
 
 .comment-section-comment {
-  max-width: 300px;
+  max-width: 320px;
   word-wrap: break-word;
   white-space: pre-wrap;
 }

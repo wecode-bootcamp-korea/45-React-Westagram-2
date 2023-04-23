@@ -67,7 +67,11 @@ export const LeftArticle = () => {
             <div>wannagohome</div>
           </div>
           <div>
-            <i className="fas fa-ellipsis-h" />
+            <img
+              className="artc-option"
+              src="/images/heeyeonKim/option.png"
+              alt=""
+            />
           </div>
         </div>
         <div style={{ lineHeight: 0 }}>
@@ -111,7 +115,7 @@ export const LeftArticle = () => {
           <div>wannagohome</div>
           <div>집에 가고싶다...</div>
         </div>
-        <CommentList comments={comments} />
+        <CommentList comments={comments} setComments={setComments} />
         <div className="show-time">42분 전</div>
         <CommentInput setComments={setComments} />
       </article>
@@ -120,11 +124,20 @@ export const LeftArticle = () => {
 };
 
 export const CommentList = props => {
-  const { comments } = props;
+  const { comments, setComments } = props;
+
+  function removeItem(commentItem) {
+    setComments(comments => {
+      return comments.filter(comment => comment !== commentItem);
+    });
+  }
+
   return (
     <>
       {comments.map((comment, index) => {
-        return <CommentItem key={index} comment={comment} />;
+        return (
+          <CommentItem key={index} comment={comment} onRemove={removeItem} />
+        );
       })}
     </>
   );
@@ -132,17 +145,23 @@ export const CommentList = props => {
 
 //댓글
 export const CommentItem = props => {
-  const { comment } = props;
-
+  const { comment, onRemove } = props;
   return (
     <div className="comment-section">
       <div className="comment-section-left">
         <div>{comment.name}</div>
-        <div>{comment.commentBody}</div>
+        <div className="comment-section-comment">{comment.commentBody}</div>
       </div>
       <div className="img-gap">
-        <button className="comment-heart btn-remove">삭제</button>
-        <div className="transparent-heart" />
+        <button
+          className="comment-heart btn-remove"
+          onClick={() => {
+            onRemove(comment);
+          }}
+        >
+          삭제
+        </button>
+        <div className={`${comment.isLiked ? 'red' : 'transparent'}-heart`} />
       </div>
     </div>
   );
@@ -150,31 +169,34 @@ export const CommentItem = props => {
 
 export const CommentInput = props => {
   const { setComments } = props;
-  const [commentBody, setCommentBody] = useState('');
+  const [inputText, setInputText] = useState('');
 
   const handleClick = () => {
     postComment();
   };
   const postComment = () => {
     setComments(prev => {
-      return [...prev, { name: 'juicy', commentBody: commentBody }];
+      return [
+        ...prev,
+        { name: 'juicy', commentBody: inputText, isLiked: false },
+      ];
     });
-    setCommentBody('');
+    setInputText('');
   };
 
   const handleKeyDown = e => {
-    if (e.key === 'Enter' && commentBody.length > 0) postComment();
+    if (e.key === 'Enter' && inputText.length > 0) postComment();
   };
 
   return (
     <div className="comment-form-wrapper">
       <input
         type="text"
-        value={commentBody}
+        value={inputText}
         placeholder="댓글 달기..."
         className="comment-box"
         onChange={e => {
-          setCommentBody(e.target.value);
+          setInputText(e.target.value);
         }}
         onKeyUp={handleKeyDown}
       />
