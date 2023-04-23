@@ -193,7 +193,9 @@ export const CommentInput = props => {
   const [inputText, setInputText] = useState('');
 
   const handleClick = () => {
-    postComment();
+    if (inputText.length >= 1) {
+      postComment();
+    }
   };
   const postComment = () => {
     setComments(prev => {
@@ -206,7 +208,10 @@ export const CommentInput = props => {
   };
 
   const handleKeyDown = e => {
-    if (e.key === 'Enter' && inputText.length > 0) postComment();
+    if (e.key === 'Enter' && inputText.length > 0) {
+      postComment();
+      setInputText('');
+    }
   };
 
   return (
@@ -221,7 +226,10 @@ export const CommentInput = props => {
         }}
         onKeyUp={handleKeyDown}
       />
-      <button className="btn-post-comment" onClick={handleClick}>
+      <button
+        className={`btn-post-comment${inputText.length > 0 ? '-blue' : ''}`}
+        onClick={handleClick}
+      >
         게시
       </button>
     </div>
