@@ -151,9 +151,13 @@
   }
 }
 .replycontents {
-  margin-left: 10px;
+  max-width: 300px;
+  margin-left: -180px;
+  padding-left: 190px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 13px;
+  overflow-wrap: break-word;
+  white-space: nowrap;
 }
 .replywrite {
   height: 30px;

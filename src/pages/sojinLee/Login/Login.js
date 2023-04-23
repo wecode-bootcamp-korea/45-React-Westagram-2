@@ -50,7 +50,7 @@ const Login = () => {
       </button>
       <div className="forgetpassword">
         <span>
-          <a href="#">비밀번호를 잊으셨나요?</a>
+          <a href="/forgot-password">비밀번호를 잊으셨나요?</a>
         </span>
       </div>
     </div>

@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
 import './Main.scss';
 
+const Comment = ({ userid, comment }) => {
+  return (
+    <div style={{ textAlign: 'left' }}>
+      <p>
+        {userid}: {comment}
+      </p>
+    </div>
+  );
+};
 const Main = () => {
   const [comment, setComment] = useState([]);
   const [newcomment, setNewcomment] = useState('');
@@ -14,7 +23,7 @@ const Main = () => {
       const addReply = {
         id: addId,
         userid: 'jinny',
-        conent: newcomment,
+        comment: newcomment,
       };
       setComment([...comment, addReply]);
       setNewcomment('');
@@ -97,13 +106,17 @@ const Main = () => {
                 <h5>ZzangGu님 외 여러명이 좋아합니다.</h5>
               </div>
               <div className="replycontents">
-                {comment.map((reply, index) => (
-                  <div key={index}>
-                    <p style={{ textAlign: 'left' }}>
-                      {reply.userid} : {reply.conent}
-                    </p>
+                <div className="replycontents">
+                  <div className="replycontents">
+                    {comment.map(comment => (
+                      <Comment
+                        key={comment.id}
+                        userid={comment.userid}
+                        comment={comment.comment}
+                      />
+                    ))}
                   </div>
-                ))}
+                </div>
               </div>
               <input
                 className="replywrite"
