@@ -132,11 +132,29 @@ export const CommentList = props => {
     });
   }
 
+  const toggleLiked = commentItem => {
+    const newComments = comments.map(element => {
+      if (element === commentItem) {
+        return {
+          ...element,
+          isLiked: !element.isLiked,
+        };
+      }
+      return element;
+    });
+    setComments(newComments);
+  };
+
   return (
     <>
       {comments.map((comment, index) => {
         return (
-          <CommentItem key={index} comment={comment} onRemove={removeItem} />
+          <CommentItem
+            key={index}
+            comment={comment}
+            onRemove={removeItem}
+            toggleLiked={toggleLiked}
+          />
         );
       })}
     </>
@@ -145,7 +163,7 @@ export const CommentList = props => {
 
 //댓글
 export const CommentItem = props => {
-  const { comment, onRemove } = props;
+  const { comment, onRemove, toggleLiked } = props;
   return (
     <div className="comment-section">
       <div className="comment-section-left">
@@ -161,7 +179,10 @@ export const CommentItem = props => {
         >
           삭제
         </button>
-        <div className={`${comment.isLiked ? 'red' : 'transparent'}-heart`} />
+        <div
+          className={`${comment.isLiked ? 'red' : 'transparent'}-heart`}
+          onClick={() => toggleLiked(comment)}
+        />
       </div>
     </div>
   );
