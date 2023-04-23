@@ -4,6 +4,10 @@
   border-color: gray;
 }
 
+.comment {
+  text-align: center;
+}
+
 .topmenu {
   display: flex;
   justify-content: space-between;
@@ -156,8 +160,8 @@
   padding-left: 190px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 13px;
-  overflow-wrap: break-word;
-  white-space: nowrap;
+  overflow-wrap: break-word; // 단어가 줄 바꿈될 수 있는 지점에서만 줄 바꿈을 수행
+  white-space: nowrap; // 텍스트 노드의 줄바꿈 없이, 한 줄로 모두 표시
 }
 .replywrite {
   height: 30px;

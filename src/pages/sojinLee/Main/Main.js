@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import './Main.scss';
 
-const Comment = ({ userid, comment }) => {
+const Comment = props => {
+  const { userid, comment } = props;
   return (
-    <div style={{ textAlign: 'left' }}>
+    <div className="comment">
       <p>
         {userid}: {comment}
       </p>
@@ -18,14 +19,14 @@ const Main = () => {
     event.preventDefault();
 
     if (newcomment !== '') {
-      const addId = comment.length > 0 ? comment[comment.length - 1].id + 1 : 1;
+      const addId = comment.length > 0 ? comment[comment.length - 1].id + 1 : 1; //comment 배열의 길이가 0인 경우, 새 댓글의 ID는 1이 됩니다. 그러나 comment 배열에 이미 댓글이 있는 경우, 마지막 댓글의 ID에 1을 더한 값이 새 댓글의 ID가 된다.
 
       const addReply = {
         id: addId,
         userid: 'jinny',
         comment: newcomment,
       };
-      setComment([...comment, addReply]);
+      setComment([...comment, addReply]); //. 배열의 전개 연산자(...)를 사용하여 이전 배열의 모든 항목을 새 배열에 복사하고 기존의 comment 배열과 addReply 객체를 합쳐서 새로운 배열을 만든다.
       setNewcomment('');
     }
   };
@@ -115,6 +116,7 @@ const Main = () => {
                         comment={comment.comment}
                       />
                     ))}
+                    {/*key 속성은 리액트에서 리스트를 렌더링할 때 각 아이템을 식별하는 역할을 함 */}
                   </div>
                 </div>
               </div>
