@@ -1,7 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Main.scss';
 
 const Main = () => {
+  const [comment, setComment] = useState([]);
+  const [newcomment, setNewcomment] = useState('');
+
+  const AddcomentHandler = event => {
+    event.preventDefault();
+
+    if (newcomment !== '') {
+      const addId = comment.length > 0 ? comment[comment.length - 1].id + 1 : 1;
+
+      const addReply = {
+        id: addId,
+        userid: 'jinny',
+        conent: newcomment,
+      };
+      setComment([...comment, addReply]);
+      setNewcomment('');
+    }
+  };
   return (
     <>
       <div className="topmenu">
@@ -14,7 +32,7 @@ const Main = () => {
           <h3>WeStagram</h3>
         </div>
         <div className="logo">
-          <input className="search" type="text" placeholder="검색" size="30" />
+          <input className="search" type="text" placeholder="검색" size="45" />
         </div>
         <div className="rightmenu">
           <img
@@ -78,8 +96,32 @@ const Main = () => {
                 />
                 <h5>ZzangGu님 외 여러명이 좋아합니다.</h5>
               </div>
-              <input className="replywrite" placeholder="" size="30" />
-              <button className="replybtn" type="button">
+              <div className="replycontents">
+                {comment.map((reply, index) => (
+                  <div key={index}>
+                    <p style={{ textAlign: 'left' }}>
+                      {reply.userid} : {reply.conent}
+                    </p>
+                  </div>
+                ))}
+              </div>
+              <input
+                className="replywrite"
+                placeholder=""
+                size="30"
+                value={newcomment}
+                onChange={event => setNewcomment(event.target.value)}
+                onKeyDown={event => {
+                  if (event.key === 'Enter') {
+                    AddcomentHandler(event);
+                  }
+                }}
+              />
+              <button
+                className="replybtn"
+                type="button"
+                onClick={AddcomentHandler}
+              >
                 게시
               </button>
             </div>
