@@ -7,7 +7,7 @@ const Login = () => {
 
   const [userId, setUserId] = useState('');
   const [userPassword, setUserPassword] = useState('');
-  const isInputValid = userId.includes('@') && userId.length >= 5;
+  const isInputValid = userId.includes('@') && userPassword.length >= 5; //includes() 메서드는 문자열에 특정 문자열이 포함되어 있는지 여부를 확인하기 위한 메서드로써 userid에 @이 포함되어 있는지 password가 5글자 이상인지 포함되어있는지 확인
 
   const saveUserId = event => {
     setUserId(event.target.value);
@@ -50,7 +50,7 @@ const Login = () => {
       </button>
       <div className="forgetpassword">
         <span>
-          <a href="/forgot-password">비밀번호를 잊으셨나요?</a>
+          <a href="/forgetpassword">비밀번호를 잊으셨나요?</a>
         </span>
       </div>
     </div>
