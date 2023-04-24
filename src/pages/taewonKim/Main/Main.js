@@ -1,7 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Main.scss';
 
 const MainTaewon = () => {
+  const [review, setReview] = useState();
+  const [postBtn, setPostBtn] = useState(false);
+
+  const saveReview = e => {
+    setReview(e.target.value);
+    setPostBtn(e.target.value.length >= 1 && true);
+  };
+
+  const addReview = () => {
+    return (
+      <div className="comment-list">
+        <p className="comment-user">steve_jobs</p>
+        <p className="comment-text">{review}</p>
+        <button className="comment-like-btn">
+          <img
+            alt="like"
+            src="images/taewonKim/commentHeart.svg"
+            className="comment-like-icon"
+          />
+        </button>
+      </div>
+    );
+  };
+
   return (
     <div className="main">
       <nav className="nav-container">
@@ -127,8 +151,17 @@ const MainTaewon = () => {
                 type="text"
                 placeholder="댓글 달기..."
                 className="comment"
+                onChange={saveReview}
               />
-              <button className="post-btn post-btn-default">게시</button>
+              <button
+                className={`post-btn ${
+                  postBtn ? 'post-btn-active' : 'post-btn-default'
+                }`}
+                disabled={!postBtn}
+                onClick={addReview}
+              >
+                게시
+              </button>
             </div>
           </div>
         </article>
