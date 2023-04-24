@@ -10,11 +10,19 @@ const CommentInput = props => {
       postComment();
     }
   };
+  const now = new Date();
+  const nowMillis = now.getTime();
+
   const postComment = () => {
     setComments(prev => {
       return [
         ...prev,
-        { name: 'juicy', commentBody: inputText, isLiked: false },
+        {
+          name: 'juicy',
+          commentBody: inputText,
+          isLiked: false,
+          time: nowMillis,
+        },
       ];
     });
     setInputText('');

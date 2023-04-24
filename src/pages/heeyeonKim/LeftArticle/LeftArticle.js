@@ -70,7 +70,6 @@ const LeftArticle = () => {
           <div>집에 가고싶다...</div>
         </div>
         <CommentList comments={comments} setComments={setComments} />
-        <div className="show-time">42분 전</div>
         <CommentInput setComments={setComments} />
       </article>
     </div>
