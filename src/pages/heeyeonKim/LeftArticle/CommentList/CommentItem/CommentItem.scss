@@ -1,0 +1,56 @@
+.comment-section {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 12px;
+}
+
+.comment-section-left {
+  display: flex;
+  flex: 1;
+  padding: 4px 12px 0 12px;
+  gap: 8px;
+}
+
+.comment-section-comment {
+  max-width: 320px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.comment-heart {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.transparent-heart {
+  width: 16px;
+  height: 16px;
+  background-image: url(../../../../../../public/images/heeyeonKim/heart.png);
+  background-size: 16px 16px;
+  cursor: pointer;
+}
+
+.red-heart {
+  width: 16px;
+  height: 16px;
+  background-image: url(../../../../../../public/images/heeyeonKim/reaction_heart.png);
+  background-size: 16px 16px;
+  cursor: pointer;
+}
+
+.img-gap {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-remove {
+  width: auto;
+  border: none;
+  background-color: white;
+  color: #c2bebe;
+
+  &:hover {
+    color: black;
+  }
+}

@@ -5,11 +5,12 @@ import { useNavigate } from 'react-router-dom';
 const LoginHeeyeon = () => {
   const navigate = useNavigate();
   const [id, setId] = useState('');
+  const [pw, setPw] = useState('');
+
   const saveUserId = e => {
     setId(e.target.value);
   };
 
-  const [pw, setPw] = useState('');
   const saveUserPw = e => {
     setPw(e.target.value);
   };

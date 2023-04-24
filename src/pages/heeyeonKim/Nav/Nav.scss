@@ -1,0 +1,69 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  padding: 16px 16px;
+  .navli3 {
+    display: flex;
+    gap: 24px;
+  }
+
+  .nav-img {
+    width: 24px;
+  }
+}
+
+.navli1 {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.nav-logo {
+  display: inline-block;
+  padding-top: 6px;
+  text-decoration: none;
+}
+
+.logoimg {
+  width: 24px;
+  height: 24px;
+  background-image: url(../../../../public/images/heeyeonKim/instagram.png);
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+}
+
+.nav-title {
+  padding-left: 16px;
+  border-left: 1px solid black;
+  font-family: 'Lobster', cursive;
+  font-size: 32px;
+}
+
+.input-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  padding: 4px;
+  border: 1px solid #c2bebe;
+  border-radius: 4px;
+}
+
+.input-search {
+  width: 100%;
+  padding: 0;
+  border: none;
+  outline: none;
+  background-image: url(../../../../public/images/heeyeonKim/search-interface-symbol.png);
+  background-repeat: no-repeat;
+  background-position: 52px center;
+  background-size: contain;
+  text-align: center;
+  appearance: none;
+
+  &:focus {
+    background-image: none;
+    text-align: left;
+  }
+}

@@ -1,0 +1,87 @@
+.article-container {
+  .artc-wrapper {
+    border: 1px solid #c2bebe;
+    background-color: white;
+  }
+
+  .artc-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 480px;
+    padding: 12px;
+  }
+
+  .react-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 12px 0 12px;
+  }
+
+  .post-info {
+    display: flex;
+    gap: 8px;
+    padding: 4px 12px 0 12px;
+  }
+
+  .comment-form-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 12px;
+    border-top: 1px solid #c2bebe;
+  }
+}
+
+.artc-header {
+  .artc-profile {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+}
+
+.artc-profile {
+  .personal-profile {
+    width: 40px;
+    border-radius: 50px;
+  }
+}
+
+.artc-option {
+  width: 24px;
+  height: 24px;
+}
+
+.react-section {
+  .react-left {
+    display: flex;
+    gap: 16px;
+  }
+}
+
+.react-left {
+  .react-img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.react-right {
+  .react-img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.show-like {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 12px;
+
+  .like-profile {
+    width: 24px;
+    border-radius: 50px;
+  }
+}
