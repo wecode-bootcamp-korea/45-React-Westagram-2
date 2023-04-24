@@ -44,7 +44,7 @@ const Login = () => {
         type="button"
         onClick={goToMain}
         className={isInputValid ? 'buttonlogin' : 'buttonlogindisabled'}
-        disabled={isInputValid ? false : true}
+        disabled={!isInputValid}
       >
         로그인
       </button>
