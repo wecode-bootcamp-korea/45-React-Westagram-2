@@ -2,28 +2,21 @@ import React, { useState } from 'react';
 import './Main.scss';
 
 const MainTaewon = () => {
-  const [review, setReview] = useState();
+  const [comment, setComment] = useState('');
   const [postBtn, setPostBtn] = useState(false);
+  const [reviewes, setReviewes] = useState([]);
 
-  const saveReview = e => {
-    setReview(e.target.value);
-    setPostBtn(e.target.value.length >= 1 && true);
+  const saveComment = e => {
+    setComment(e.target.value);
+    setPostBtn(e.target.value.length >= 1 ? true : false);
   };
 
-  const addReview = () => {
-    return (
-      <div className="comment-list">
-        <p className="comment-user">steve_jobs</p>
-        <p className="comment-text">{review}</p>
-        <button className="comment-like-btn">
-          <img
-            alt="like"
-            src="images/taewonKim/commentHeart.svg"
-            className="comment-like-icon"
-          />
-        </button>
-      </div>
-    );
+  const addReivew = () => {
+    if (comment.length) {
+      setReviewes([...reviewes, { id: reviewes.length + 1, value: comment }]);
+      setComment('');
+      setPostBtn(false);
+    }
   };
 
   return (
@@ -133,8 +126,8 @@ const MainTaewon = () => {
               <p className="feed-text">애플 삼성에 팔거에요!</p>
               <p className="upload-time">50분전</p>
             </div>
-            <div className="post-comment-box">
-              <div className="comment-list">
+            <ul className="post-comment-box">
+              <li className="comment-list">
                 <p className="comment-user">steve_jobs</p>
                 <p className="comment-text">그러지마!!!</p>
                 <button className="comment-like-btn">
@@ -144,31 +137,51 @@ const MainTaewon = () => {
                     className="comment-like-icon"
                   />
                 </button>
-              </div>
-            </div>
+              </li>
+              {reviewes.map(cm => (
+                <li className="comment-list" key={cm.id}>
+                  <p className="comment-user">jae_dragon</p>
+                  <p className="comment-text">{cm.value}</p>
+                  <button className="comment-like-btn">
+                    <img
+                      alt="like"
+                      src="images/taewonKim/commentHeart.svg"
+                      className="comment-like-icon"
+                    />
+                  </button>
+                </li>
+              ))}
+            </ul>
             <div className="comment-box">
-              <input
-                type="text"
-                placeholder="댓글 달기..."
-                className="comment"
-                onChange={saveReview}
-              />
-              <button
-                className={`post-btn ${
-                  postBtn ? 'post-btn-active' : 'post-btn-default'
-                }`}
-                disabled={!postBtn}
-                onClick={addReview}
-              >
-                게시
-              </button>
+              <form onSubmit={e => e.preventDefault()}>
+                <input
+                  type="text"
+                  placeholder="댓글 달기..."
+                  className="comment"
+                  value={comment}
+                  onChange={saveComment}
+                />
+                <button
+                  className={`post-btn ${
+                    postBtn ? 'post-btn-active' : 'post-btn-default'
+                  }`}
+                  disabled={!postBtn}
+                  onClick={addReivew}
+                >
+                  게시
+                </button>
+              </form>
             </div>
           </div>
         </article>
         <div className="feed-sub">
           <div className="sub-me">
             <div className="sub-me-left">
-              <img src="images/taewonKim/user/user3.jpg" className="sub-img" />
+              <img
+                alt="sub-img"
+                src="images/taewonKim/user/user3.jpg"
+                className="sub-img"
+              />
             </div>
             <div className="sub-me-right">
               <p className="nick-name">wecode_bootcamp</p>
@@ -182,49 +195,77 @@ const MainTaewon = () => {
             </div>
             <div className="sub-story-list">
               <div className="user">
-                <img src="images/taewonKim/user/user4.jpg" className="photo" />
+                <img
+                  alt="user-img"
+                  src="images/taewonKim/user/user4.jpg"
+                  className="photo"
+                />
                 <div className="name-time">
                   <p className="nick-name">intel</p>
                   <p className="upload-time">15분전</p>
                 </div>
               </div>
               <div class="user">
-                <img src="images/taewonKim/user/user5.jpg" className="photo" />
+                <img
+                  alt="user-img"
+                  src="images/taewonKim/user/user5.jpg"
+                  className="photo"
+                />
                 <div className="name-time">
                   <p className="nick-name">lg</p>
                   <p className="upload-time">15분전</p>
                 </div>
               </div>
               <div className="user">
-                <img src="images/taewonKim/user/user6.jpg" className="photo" />
+                <img
+                  alt="user-img"
+                  src="images/taewonKim/user/user6.jpg"
+                  className="photo"
+                />
                 <div className="name-time">
                   <p className="nick-name">google</p>
                   <p className="upload-time">15분전</p>
                 </div>
               </div>
               <div className="user">
-                <img src="images/taewonKim/user/user7.jpg" className="photo" />
+                <img
+                  alt="user-img"
+                  src="images/taewonKim/user/user7.jpg"
+                  className="photo"
+                />
                 <div className="name-time">
                   <p className="nick-name">facebook</p>
                   <p className="upload-time">15분전</p>
                 </div>
               </div>
               <div className="user">
-                <img src="images/taewonKim/user/user8.jpg" className="photo" />
+                <img
+                  alt="user-img"
+                  src="images/taewonKim/user/user8.jpg"
+                  className="photo"
+                />
                 <div className="name-time">
                   <p className="nick-name">kakao</p>
                   <p className="upload-time">15분전</p>
                 </div>
               </div>
               <div className="user">
-                <img src="images/taewonKim/user/user9.jpg" className="photo" />
+                <img
+                  alt="user-img"
+                  src="images/taewonKim/user/user9.jpg"
+                  className="photo"
+                />
                 <div className="name-time">
                   <p className="nick-name">netflix</p>
                   <p className="upload-time">15분전</p>
                 </div>
               </div>
               <div className="user">
-                <img src="images/taewonKim/user/user10.jpg" className="photo" />
+                <img
+                  alt="user-img"
+                  src="images/taewonKim/user/user10.jpg"
+                  className="photo"
+                />
                 <div className="name-time">
                   <p className="nick-name">tsmc</p>
                   <p className="upload-time">15분전</p>
@@ -239,7 +280,11 @@ const MainTaewon = () => {
             </div>
             <div className="sub-recommend-list">
               <div className="user">
-                <img src="images/taewonKim/user/user11.jpg" className="photo" />
+                <img
+                  alt="user-img"
+                  src="images/taewonKim/user/user11.jpg"
+                  className="photo"
+                />
                 <div className="name-time">
                   <p className="nick-name">amazon</p>
                   <p className="upload-time">2명이 좋아합니다.</p>
@@ -248,7 +293,11 @@ const MainTaewon = () => {
               </div>
 
               <div className="user">
-                <img src="images/taewonKim/user/user12.jpg" className="photo" />
+                <img
+                  alt="user-img"
+                  src="images/taewonKim/user/user12.jpg"
+                  className="photo"
+                />
                 <div className="name-time">
                   <p className="nick-name">meta</p>
                   <p className="upload-time">2명이 좋아합니다.</p>
@@ -256,7 +305,11 @@ const MainTaewon = () => {
                 <button className="follow">팔로우</button>
               </div>
               <div className="user">
-                <img src="images/taewonKim/user/user13.jpg" className="photo" />
+                <img
+                  alt="user-img"
+                  src="images/taewonKim/user/user13.jpg"
+                  className="photo"
+                />
                 <div className="name-time">
                   <p className="nick-name">naver</p>
                   <p className="upload-time">2명이 좋아합니다.</p>
