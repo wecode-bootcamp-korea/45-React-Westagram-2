@@ -90,3 +90,16 @@
 .font-color-blue {
   color: #499ff1;
 }
+
+.footer-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  .footer-item {
+    display: flex;
+  }
+  .footer-link {
+    color: #c2bebe;
+    text-decoration: none;
+  }
+}

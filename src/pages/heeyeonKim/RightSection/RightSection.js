@@ -1,4 +1,5 @@
 import React from 'react';
+import FOOTER_ITEMS from './Footer';
 import './RightSection.scss';
 
 const RightSection = () => {
@@ -111,8 +112,20 @@ const RightSection = () => {
         </div>
         <div className="font-color-gray text-setting">
           <div>
-            instagram 정보 ∙ 지원 ∙ 홍보 센터 ∙ API ∙ 채용 정보 ∙
-            개인정보처리방침 ∙ 약관 ∙ 디렉터리 ∙ 프로필 ∙ 해시태그 ∙ 언어
+            <ul className="footer-list">
+              {FOOTER_ITEMS.map((item, index) => {
+                return (
+                  <React.Fragment key={item.id}>
+                    <li className="footer-item">
+                      <a className="footer-link" href={item.link}>
+                        {item.text}
+                      </a>
+                    </li>
+                    {index < FOOTER_ITEMS.length - 1 && <span>∙</span>}
+                  </React.Fragment>
+                );
+              })}
+            </ul>
           </div>
           <div>© 2019 INSTAGRAM</div>
         </div>
