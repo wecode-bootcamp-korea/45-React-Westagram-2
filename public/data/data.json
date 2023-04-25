@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "name": "wannagohome",
+    "profileimg": "/images/heeyeonKim/roonz-nl-ATgfRqpFfFI-unsplash 1.png",
+    "mainimg": "/images/heeyeonKim/home1.png",
+    "isLiked": true,
+    "commentimg": "/images/heeyeonKim/like_profile.png",
+    "likedperson": "masego",
+    "text": "집에 가고 싶다...",
+    "comments": []
+  },
+  {
+    "id": 2,
+    "name": "dream",
+    "profileimg": "/images/heeyeonKim/friends2.png",
+    "mainimg": "/images/heeyeonKim/cat copy.jpeg",
+    "isLiked": false,
+    "commentimg": "/images/heeyeonKim/friends1.png",
+    "likedperson": "silksonic",
+    "text": "고냥이",
+    "comments": []
+  }
+]

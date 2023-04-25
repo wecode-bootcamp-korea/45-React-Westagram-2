@@ -25,7 +25,7 @@ const CommentList = props => {
   };
 
   return (
-    <>
+    <div className="comment-list">
       {comments.map((comment, index) => {
         return (
           <CommentItem
@@ -36,7 +36,7 @@ const CommentList = props => {
           />
         );
       })}
-    </>
+    </div>
   );
 };
 

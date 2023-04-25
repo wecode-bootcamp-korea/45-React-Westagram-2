@@ -1,24 +1,51 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import CommentList from './CommentList/CommentList';
 import CommentInput from './CommentInput/CommentInput';
 import './LeftArticle.scss';
 
 const LeftArticle = () => {
-  const [comments, setComments] = useState([]);
+  const [feeds, setFeeds] = useState(null);
 
+  useEffect(() => {
+    fetch('/data/data.json')
+      .then(res => res.json())
+      .then(data => setFeeds(data));
+  }, []);
+
+  if (!feeds) return <></>;
+
+  return <CardsList feeds={feeds} />;
+};
+
+export default LeftArticle;
+
+const CardsList = props => {
+  const { feeds } = props;
+
+  return (
+    <div className="cardList">
+      {feeds.map(feed => {
+        return <Card feed={feed} key={feed.id} />;
+      })}
+    </div>
+  );
+};
+
+export const Card = props => {
+  const { feed } = props;
+  const { name, profileimg, mainimg, isLiked, commentimg, likedperson, text } =
+    feed;
+
+  const [comments, setComments] = useState([]);
   return (
     <div className="article-container">
       <article className="artc-wrapper">
         <div className="artc-header">
           <div className="artc-profile">
             <div>
-              <img
-                src="/images/heeyeonKim/roonz-nl-ATgfRqpFfFI-unsplash 1.png"
-                className="personal-profile"
-                alt=""
-              />
+              <img src={profileimg} className="personal-profile" alt="" />
             </div>
-            <div>wannagohome</div>
+            <div>{name}</div>
           </div>
           <div>
             <img
@@ -29,12 +56,12 @@ const LeftArticle = () => {
           </div>
         </div>
         <div style={{ lineHeight: 0 }}>
-          <img src="/images/heeyeonKim/home1.png" alt="" />
+          <img className="main-img" src={mainimg} alt="" />
         </div>
         <div className="react-section">
           <div className="react-left">
             <img
-              src="/images/heeyeonKim/reaction_heart.png"
+              src={`/images/heeyeonKim/${isLiked ? 'reaction_' : ''}heart.png`}
               className="react-img"
               alt=""
             />
@@ -58,16 +85,12 @@ const LeftArticle = () => {
           </div>
         </div>
         <div className="show-like">
-          <img
-            src="/images/heeyeonKim/like_profile.png"
-            alt=""
-            className="like-profile"
-          />
-          <div>masego님 외 10명이 좋아합니다</div>
+          <img src={commentimg} alt="" className="like-profile" />
+          <div>{`${likedperson}님 외 10명이 좋아합니다`}</div>
         </div>
         <div className="post-info">
-          <div>wannagohome</div>
-          <div>집에 가고싶다...</div>
+          <div>{name}</div>
+          <div>{text}</div>
         </div>
         <CommentList comments={comments} setComments={setComments} />
         <CommentInput setComments={setComments} />
@@ -75,5 +98,3 @@ const LeftArticle = () => {
     </div>
   );
 };
-
-export default LeftArticle;
