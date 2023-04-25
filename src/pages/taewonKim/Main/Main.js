@@ -3,7 +3,7 @@ import './Main.scss';
 
 export const MainReview = ({ id, value }) => {
   return (
-    <li className="comment-list">
+    <li className="comment-list" id={id}>
       <p className="comment-user">jae_dragon</p>
       <p className="comment-text">{value}</p>
       <button className="comment-like-btn">
