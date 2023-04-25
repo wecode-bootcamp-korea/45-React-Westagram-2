@@ -1,6 +1,22 @@
 import React, { useState } from 'react';
 import './Main.scss';
 
+export const MainReview = ({ id, value }) => {
+  return (
+    <li className="comment-list">
+      <p className="comment-user">jae_dragon</p>
+      <p className="comment-text">{value}</p>
+      <button className="comment-like-btn">
+        <img
+          alt="like"
+          src="images/taewonKim/commentHeart.svg"
+          className="comment-like-icon"
+        />
+      </button>
+    </li>
+  );
+};
+
 const MainTaewon = () => {
   const [comment, setComment] = useState('');
   const [postBtn, setPostBtn] = useState(false);
@@ -127,19 +143,9 @@ const MainTaewon = () => {
               <p className="upload-time">50분전</p>
             </div>
             <ul className="post-comment-box">
-              {reviewes.map(cm => (
-                <li className="comment-list" key={cm.id}>
-                  <p className="comment-user">jae_dragon</p>
-                  <p className="comment-text">{cm.value}</p>
-                  <button className="comment-like-btn">
-                    <img
-                      alt="like"
-                      src="images/taewonKim/commentHeart.svg"
-                      className="comment-like-icon"
-                    />
-                  </button>
-                </li>
-              ))}
+              {reviewes.map(cm => {
+                return <MainReview key={cm.id} id={cm.id} value={cm.value} />;
+              })}
             </ul>
             <div className="comment-box">
               <form onSubmit={e => e.preventDefault()}>
