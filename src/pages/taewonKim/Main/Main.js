@@ -127,17 +127,6 @@ const MainTaewon = () => {
               <p className="upload-time">50분전</p>
             </div>
             <ul className="post-comment-box">
-              <li className="comment-list">
-                <p className="comment-user">steve_jobs</p>
-                <p className="comment-text">그러지마!!!</p>
-                <button className="comment-like-btn">
-                  <img
-                    alt="like"
-                    src="images/taewonKim/commentHeart.svg"
-                    className="comment-like-icon"
-                  />
-                </button>
-              </li>
               {reviewes.map(cm => (
                 <li className="comment-list" key={cm.id}>
                   <p className="comment-user">jae_dragon</p>
