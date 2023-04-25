@@ -1,0 +1,30 @@
+.full-page-cover {
+  height: 100vh;
+  background-color: #fafafa;
+
+  .header {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    border-bottom: 1px solid #c2bebe;
+    background-color: white;
+  }
+
+  .main-contents-container {
+    display: flex;
+    justify-content: center;
+    background-color: #fafafa;
+    gap: 32px;
+  }
+}
+
+.main-contents-container {
+  padding-bottom: 56px;
+  .article-container {
+    padding-top: 56px;
+  }
+
+  .div-right {
+    padding-top: 56px;
+  }
+}
