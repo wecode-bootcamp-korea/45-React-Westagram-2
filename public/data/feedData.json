@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "profilePhoto": "https://picsum.photos/25/25",
+    "name": "apple_official",
+    "feedPhoto": "https://picsum.photos/468/468",
+    "likePhoto": "https://picsum.photos/26/26",
+    "likeName": "samsung",
+    "feedText": "애플 삼성에 팔거에요!"
+  },
+  {
+    "id": 1,
+    "profilePhoto": "https://picsum.photos/27/27",
+    "name": "apple_official",
+    "feedPhoto": "https://picsum.photos/469/469",
+    "likePhoto": "https://picsum.photos/28/28",
+    "likeName": "samsung",
+    "feedText": "애플 삼성에 팔거에요!"
+  },
+  {
+    "id": 1,
+    "profilePhoto": "https://picsum.photos/29/29",
+    "name": "apple_official",
+    "feedPhoto": "https://picsum.photos/470/470",
+    "likePhoto": "https://picsum.photos/30/30",
+    "likeName": "samsung",
+    "feedText": "애플 삼성에 팔거에요!"
+  },
+  {
+    "id": 1,
+    "profilePhoto": "https://picsum.photos/31/31",
+    "name": "apple_official",
+    "feedPhoto": "https://picsum.photos/471/471",
+    "likePhoto": "https://picsum.photos/32/32",
+    "likeName": "samsung",
+    "feedText": "애플 삼성에 팔거에요!"
+  }
+]

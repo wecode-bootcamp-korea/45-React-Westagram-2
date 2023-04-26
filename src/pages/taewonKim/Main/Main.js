@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import ASIDE_DATA from '../FeedRight/asideData';
 import './Main.scss';
 
 export const MainReview = ({ id, value }) => {
   return (
-    <li className="comment-list" id={id}>
+    <li className="comment-list" key={id}>
       <p className="comment-user">jae_dragon</p>
       <p className="comment-text">{value}</p>
       <button className="comment-like-btn">
@@ -22,7 +23,6 @@ const MainTaewon = () => {
   const [comment, setComment] = useState('');
   const [postBtn, setPostBtn] = useState(false);
   const [reviewes, setReviewes] = useState([]);
-  const [footerList, setFooterList] = useState();
 
   const saveComment = e => {
     setComment(e.target.value);
@@ -36,16 +36,7 @@ const MainTaewon = () => {
       setPostBtn(false);
     }
   };
-
-  useEffect(() => {
-    fetch('/data/asideData.json', {
-      method: 'GET',
-    })
-      .then(res => res.json())
-      .then(data => setFooterList(data));
-  }, []);
-
-  if (!footerList) return;
+  // if (!footerList) return;
 
   return (
     <div className="main">
@@ -151,8 +142,8 @@ const MainTaewon = () => {
               <p className="upload-time">50분전</p>
             </div>
             <ul className="post-comment-box">
-              {reviewes.map(cm => {
-                return <MainReview key={cm.id} id={cm.id} value={cm.value} />;
+              {reviewes.map(({ id, value }) => {
+                return <MainReview key={id} id={id} value={value} />;
               })}
             </ul>
             <div className="comment-box">
@@ -323,14 +314,13 @@ const MainTaewon = () => {
           </div>
           <div className="page-info">
             <ul className="info-list">
-              {footerList.map(({ id, src, title, classnamed }) => {
+              {ASIDE_DATA.map(({ id, src, title, classnamed }) => {
                 return (
                   <Link key={id} to={src} className={classnamed}>
                     {title}
                   </Link>
                 );
               })}
-              {/* Link 컴포넌트로 사용하기 */}
             </ul>
             <p className="copyright">@ 2023 INSTAGRAM</p>
           </div>
