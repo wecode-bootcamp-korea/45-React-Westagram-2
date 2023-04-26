@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Main.scss';
 
 export const MainReview = ({ id, value }) => {
@@ -21,6 +22,7 @@ const MainTaewon = () => {
   const [comment, setComment] = useState('');
   const [postBtn, setPostBtn] = useState(false);
   const [reviewes, setReviewes] = useState([]);
+  const [footerList, setFooterList] = useState();
 
   const saveComment = e => {
     setComment(e.target.value);
@@ -34,6 +36,16 @@ const MainTaewon = () => {
       setPostBtn(false);
     }
   };
+
+  useEffect(() => {
+    fetch('/data/data.json', {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(data => setFooterList(data));
+  }, []);
+
+  if (!footerList) return;
 
   return (
     <div className="main">
@@ -314,10 +326,16 @@ const MainTaewon = () => {
             </div>
           </div>
           <div className="page-info">
-            <p className="info-list">
-              Instagram 정보, 지원, 홍보 센터, API,채용
-              정보,개인정보처리방침,약관,디렉터리,프로필,해시테그,언어
-            </p>
+            <ul className="info-list">
+              {footerList.map(({ id, src, title, classnamed }) => {
+                return (
+                  <Link key={id} to={src} className={classnamed}>
+                    {title}
+                  </Link>
+                );
+              })}
+              {/* Link 컴포넌트로 사용하기 */}
+            </ul>
             <p className="copyright">@ 2023 INSTAGRAM</p>
           </div>
         </div>
