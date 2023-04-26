@@ -1,12 +1,12 @@
 import React from 'react';
 import Story from './Story/Story';
 import Footer from './Footer/Footer';
-import './FeedRight.scss';
 import Recommend from './Recommend/Recommend';
+import './FeedRight.scss';
 
 const FeedRight = () => {
   return (
-    <div className="feed-sub">
+    <div className="feed-right">
       <div className="sub-me">
         <div className="sub-me-left">
           <img
