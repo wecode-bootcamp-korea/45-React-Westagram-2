@@ -38,7 +38,7 @@ const MainTaewon = () => {
   };
 
   useEffect(() => {
-    fetch('/data/data.json', {
+    fetch('/data/asideData.json', {
       method: 'GET',
     })
       .then(res => res.json())
@@ -92,7 +92,7 @@ const MainTaewon = () => {
               <img
                 alt="my_photo"
                 className="photo"
-                src="images/taewonKim/user/user1.jpg"
+                src="https://picsum.photos/50/50"
               />
               <p className="nick-name">apple_official</p>
             </div>
@@ -143,11 +143,7 @@ const MainTaewon = () => {
               </div>
             </div>
             <div className="like">
-              <img
-                alt="user"
-                class="photo"
-                src="images/taewonKim/user/user2.jpg"
-              />
+              <img alt="user" class="photo" src="https://picsum.photos/50/50" />
               <p className="nick-name">samsung 님이 좋아합니다.</p>
             </div>
             <div className="feed-text-box">
@@ -186,7 +182,7 @@ const MainTaewon = () => {
             <div className="sub-me-left">
               <img
                 alt="sub-img"
-                src="images/taewonKim/user/user3.jpg"
+                src="https://picsum.photos/50/50"
                 className="sub-img"
               />
             </div>
@@ -204,7 +200,7 @@ const MainTaewon = () => {
               <div className="user">
                 <img
                   alt="user-img"
-                  src="images/taewonKim/user/user4.jpg"
+                  src="https://picsum.photos/50/50"
                   className="photo"
                 />
                 <div className="name-time">
@@ -215,7 +211,7 @@ const MainTaewon = () => {
               <div class="user">
                 <img
                   alt="user-img"
-                  src="images/taewonKim/user/user5.jpg"
+                  src="https://picsum.photos/50/50"
                   className="photo"
                 />
                 <div className="name-time">
@@ -226,7 +222,7 @@ const MainTaewon = () => {
               <div className="user">
                 <img
                   alt="user-img"
-                  src="images/taewonKim/user/user6.jpg"
+                  src="https://picsum.photos/50/50"
                   className="photo"
                 />
                 <div className="name-time">
@@ -237,7 +233,7 @@ const MainTaewon = () => {
               <div className="user">
                 <img
                   alt="user-img"
-                  src="images/taewonKim/user/user7.jpg"
+                  src="https://picsum.photos/50/50"
                   className="photo"
                 />
                 <div className="name-time">
@@ -248,7 +244,7 @@ const MainTaewon = () => {
               <div className="user">
                 <img
                   alt="user-img"
-                  src="images/taewonKim/user/user8.jpg"
+                  src="https://picsum.photos/50/50"
                   className="photo"
                 />
                 <div className="name-time">
@@ -259,7 +255,7 @@ const MainTaewon = () => {
               <div className="user">
                 <img
                   alt="user-img"
-                  src="images/taewonKim/user/user9.jpg"
+                  src="https://picsum.photos/50/50"
                   className="photo"
                 />
                 <div className="name-time">
@@ -270,7 +266,7 @@ const MainTaewon = () => {
               <div className="user">
                 <img
                   alt="user-img"
-                  src="images/taewonKim/user/user10.jpg"
+                  src="https://picsum.photos/50/50"
                   className="photo"
                 />
                 <div className="name-time">
@@ -289,7 +285,7 @@ const MainTaewon = () => {
               <div className="user">
                 <img
                   alt="user-img"
-                  src="images/taewonKim/user/user11.jpg"
+                  src="https://picsum.photos/50/50"
                   className="photo"
                 />
                 <div className="name-time">
@@ -302,7 +298,7 @@ const MainTaewon = () => {
               <div className="user">
                 <img
                   alt="user-img"
-                  src="images/taewonKim/user/user12.jpg"
+                  src="https://picsum.photos/50/50"
                   className="photo"
                 />
                 <div className="name-time">
@@ -314,7 +310,7 @@ const MainTaewon = () => {
               <div className="user">
                 <img
                   alt="user-img"
-                  src="images/taewonKim/user/user13.jpg"
+                  src="https://picsum.photos/50/50"
                   className="photo"
                 />
                 <div className="name-time">
