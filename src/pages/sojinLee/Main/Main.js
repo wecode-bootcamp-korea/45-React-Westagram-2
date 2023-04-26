@@ -65,6 +65,27 @@ const Main = () => {
       <main>
         <article className="content">
           <div className="wes">
+            <div className="rightside">
+              <img
+                className="streetside"
+                src="/images/sojinlee/food.jpg"
+                alt="사이드 이미지"
+              />
+              <div class="right">
+                <span className="wesid">
+                  <h2>sojin</h2>
+                </span>
+              </div>
+              <span className="rightaside">
+                <ul>
+                  {RIGHT_ASIDE.map(info => (
+                    <li key={info.id}>
+                      <a href={info.link}>{info.text}</a>
+                    </li>
+                  ))}
+                </ul>
+              </span>
+            </div>
             <div className="info">
               <img
                 className="food"
@@ -148,3 +169,21 @@ const Main = () => {
 };
 
 export default Main;
+
+const RIGHT_ASIDE = [
+  { id: 1, link: '/introduce', text: '소개 , ' },
+  { id: 2, link: '/help', text: '도움말 , ' },
+  { id: 3, link: '/advertisement', text: '홍보 센터, ' },
+  { id: 4, link: '/api', text: 'API, ' },
+  { id: 5, link: '/employment', text: '채용 정보, ' },
+  {
+    id: 6,
+    link: '/information',
+    text: '개인정보처리방침. ',
+  },
+  { id: 7, link: '/promise', text: '약관 , ' },
+  { id: 8, link: '/location', text: '위치, ' },
+  { id: 9, link: '/popular', text: '인기 계정, ' },
+  { id: 10, link: '/tag', text: '해시 태그, ' },
+  { id: 11, link: '/lagnuage', text: '언어' },
+];
