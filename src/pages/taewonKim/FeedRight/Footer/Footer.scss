@@ -1,0 +1,22 @@
+.page-info {
+  margin-top: 10px;
+
+  .info-list {
+    .info-text {
+      color: #9f9f9f;
+      text-decoration: none;
+    }
+
+    .info-text::after {
+      content: '∙';
+    }
+
+    :last-child::after {
+      content: none;
+    }
+  }
+  .copyright {
+    margin-top: 10px;
+    color: #9f9f9f;
+  }
+}

@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import ASIDE_DATA from '../FeedRight/asideData';
+import React, { useState } from 'react';
+import FeedRight from '../FeedRight/FeedRight';
 import './Main.scss';
 
 export const MainReview = ({ id, value }) => {
@@ -134,7 +133,11 @@ const MainTaewon = () => {
               </div>
             </div>
             <div className="like">
-              <img alt="user" class="photo" src="https://picsum.photos/50/50" />
+              <img
+                alt="user"
+                className="photo"
+                src="https://picsum.photos/50/50"
+              />
               <p className="nick-name">samsung 님이 좋아합니다.</p>
             </div>
             <div className="feed-text-box">
@@ -168,163 +171,7 @@ const MainTaewon = () => {
             </div>
           </div>
         </article>
-        <div className="feed-sub">
-          <div className="sub-me">
-            <div className="sub-me-left">
-              <img
-                alt="sub-img"
-                src="https://picsum.photos/50/50"
-                className="sub-img"
-              />
-            </div>
-            <div className="sub-me-right">
-              <p className="nick-name">wecode_bootcamp</p>
-              <p className="grayfont">WeCode | 위코드</p>
-            </div>
-          </div>
-          <div className="sub-story">
-            <div className="sub-story-top">
-              <p className="grayfont">스토리</p>
-              <button className="sub-more">모두보기</button>
-            </div>
-            <div className="sub-story-list">
-              <div className="user">
-                <img
-                  alt="user-img"
-                  src="https://picsum.photos/50/50"
-                  className="photo"
-                />
-                <div className="name-time">
-                  <p className="nick-name">intel</p>
-                  <p className="upload-time">15분전</p>
-                </div>
-              </div>
-              <div class="user">
-                <img
-                  alt="user-img"
-                  src="https://picsum.photos/50/50"
-                  className="photo"
-                />
-                <div className="name-time">
-                  <p className="nick-name">lg</p>
-                  <p className="upload-time">15분전</p>
-                </div>
-              </div>
-              <div className="user">
-                <img
-                  alt="user-img"
-                  src="https://picsum.photos/50/50"
-                  className="photo"
-                />
-                <div className="name-time">
-                  <p className="nick-name">google</p>
-                  <p className="upload-time">15분전</p>
-                </div>
-              </div>
-              <div className="user">
-                <img
-                  alt="user-img"
-                  src="https://picsum.photos/50/50"
-                  className="photo"
-                />
-                <div className="name-time">
-                  <p className="nick-name">facebook</p>
-                  <p className="upload-time">15분전</p>
-                </div>
-              </div>
-              <div className="user">
-                <img
-                  alt="user-img"
-                  src="https://picsum.photos/50/50"
-                  className="photo"
-                />
-                <div className="name-time">
-                  <p className="nick-name">kakao</p>
-                  <p className="upload-time">15분전</p>
-                </div>
-              </div>
-              <div className="user">
-                <img
-                  alt="user-img"
-                  src="https://picsum.photos/50/50"
-                  className="photo"
-                />
-                <div className="name-time">
-                  <p className="nick-name">netflix</p>
-                  <p className="upload-time">15분전</p>
-                </div>
-              </div>
-              <div className="user">
-                <img
-                  alt="user-img"
-                  src="https://picsum.photos/50/50"
-                  className="photo"
-                />
-                <div className="name-time">
-                  <p className="nick-name">tsmc</p>
-                  <p className="upload-time">15분전</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="sub-recommend">
-            <div className="recommend-top">
-              <p className="grayfont">회원님을 위한 추천</p>
-              <button className="sub-more">모두보기</button>
-            </div>
-            <div className="sub-recommend-list">
-              <div className="user">
-                <img
-                  alt="user-img"
-                  src="https://picsum.photos/50/50"
-                  className="photo"
-                />
-                <div className="name-time">
-                  <p className="nick-name">amazon</p>
-                  <p className="upload-time">2명이 좋아합니다.</p>
-                </div>
-                <button className="follow">팔로우</button>
-              </div>
-
-              <div className="user">
-                <img
-                  alt="user-img"
-                  src="https://picsum.photos/50/50"
-                  className="photo"
-                />
-                <div className="name-time">
-                  <p className="nick-name">meta</p>
-                  <p className="upload-time">2명이 좋아합니다.</p>
-                </div>
-                <button className="follow">팔로우</button>
-              </div>
-              <div className="user">
-                <img
-                  alt="user-img"
-                  src="https://picsum.photos/50/50"
-                  className="photo"
-                />
-                <div className="name-time">
-                  <p className="nick-name">naver</p>
-                  <p className="upload-time">2명이 좋아합니다.</p>
-                </div>
-                <button className="follow">팔로우</button>
-              </div>
-            </div>
-          </div>
-          <div className="page-info">
-            <ul className="info-list">
-              {ASIDE_DATA.map(({ id, src, title, classnamed }) => {
-                return (
-                  <Link key={id} to={src} className={classnamed}>
-                    {title}
-                  </Link>
-                );
-              })}
-            </ul>
-            <p className="copyright">@ 2023 INSTAGRAM</p>
-          </div>
-        </div>
+        <FeedRight />
       </div>
     </div>
   );
