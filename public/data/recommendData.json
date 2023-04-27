@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "src": "https://picsum.photos/60/50",
+    "username": "amazon",
+    "like": 1
+  },
+  {
+    "id": 2,
+    "src": "https://picsum.photos/60/51",
+    "username": "meta",
+    "like": 5
+  },
+  {
+    "id": 3,
+    "src": "https://picsum.photos/60/52",
+    "username": "naver",
+    "like": 3
+  },
+  {
+    "id": 4,
+    "src": "https://picsum.photos/60/53",
+    "username": "coupang",
+    "like": 2
+  },
+  {
+    "id": 5,
+    "src": "https://picsum.photos/60/54",
+    "username": "line",
+    "like": 10
+  }
+]

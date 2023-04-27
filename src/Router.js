@@ -20,7 +20,6 @@ import MainSeungmin from './pages/seungminOh/Main/Main';
 const Router = () => {
   return (
     <BrowserRouter>
-      <Nav />
       <Routes>
         <Route path="/login-sojin" element={<LoginSojin />} />
         <Route path="/main-sojin" element={<MainSojin />} />

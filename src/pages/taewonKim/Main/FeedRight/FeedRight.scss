@@ -1,0 +1,30 @@
+.feed-right {
+  width: 220px;
+
+  .sub-me {
+    display: flex;
+    align-items: center;
+
+    .sub-me-left {
+      .sub-img {
+        width: 32px;
+        height: 32px;
+        margin-right: 10px;
+        border-radius: 50%;
+      }
+    }
+
+    .sub-me-right {
+      .nick-name {
+        font-size: 12px;
+      }
+
+      .grayfont {
+        display: flex;
+        align-items: center;
+        color: #9f9f9f;
+        font-size: 12px;
+      }
+    }
+  }
+}

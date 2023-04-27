@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "profilePhoto": "https://picsum.photos/25/30",
+    "username": "apple_official",
+    "feedPhoto": "https://picsum.photos/468/468",
+    "likeUserPhoto": "https://picsum.photos/26/26",
+    "likeUserName": "samsung",
+    "feedText": "애플 삼성에 팔거에요!",
+    "postTime": 10
+  },
+  {
+    "id": 2,
+    "profilePhoto": "https://picsum.photos/25/31",
+    "username": "wecode",
+    "feedPhoto": "https://picsum.photos/469/469",
+    "likeUserPhoto": "https://picsum.photos/28/28",
+    "likeUserName": "naver",
+    "feedText": "태원님 NAVER 입사 축하!!",
+    "postTime": 20
+  },
+  {
+    "id": 3,
+    "profilePhoto": "https://picsum.photos/25/32",
+    "username": "mancity",
+    "feedPhoto": "https://picsum.photos/470/470",
+    "likeUserPhoto": "https://picsum.photos/30/30",
+    "likeUserName": "manutd",
+    "feedText": "아싸 이번시즌 우승 각!",
+    "postTime": 30
+  },
+  {
+    "id": 4,
+    "profilePhoto": "https://picsum.photos/25/33",
+    "username": "mango",
+    "feedPhoto": "https://picsum.photos/471/475",
+    "likeUserPhoto": "https://picsum.photos/32/32",
+    "likeUserName": "guava",
+    "feedText": "포시즌을 낳았네~",
+    "postTime": 40
+  },
+  {
+    "id": 5,
+    "profilePhoto": "https://picsum.photos/25/34",
+    "username": "taywony",
+    "feedPhoto": "https://picsum.photos/471/471",
+    "likeUserPhoto": "https://picsum.photos/32/32",
+    "likeUserName": "github",
+    "feedText": "깃헙 잔디밭 완성",
+    "postTime": 50
+  }
+]
