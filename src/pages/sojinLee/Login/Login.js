@@ -19,7 +19,33 @@ const Login = () => {
 
   const goToMain = () => {
     navigate('/main-sojin');
+    // fetch('http://10.58.52.140:3001/users/logIn', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json;charset=utf-8',
+    //   },
+    //   body: JSON.stringify({
+    //     email: userId,
+    //     password: userPassword,
+    //   }),
+    // })
+    //   .then(response => {
+    //     console.log('res>>>', response);
+    //     return response.json();
+    //   })
+    //   .then(result => {
+    //     console.log(result);
+    //     localStorage.setItem('token', result.accessToken);
+    //   });
   };
+
+  // // fetch('http://10.58.52.140:4000/users/signup', {
+  // //   method: 'post',
+  // // })
+  // //   .then(res => {
+  // //     res.json();
+  // //   })
+  // //   .then(data => {});
 
   return (
     <div className="login">

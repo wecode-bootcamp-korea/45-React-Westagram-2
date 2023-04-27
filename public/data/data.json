@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "img": "/images/sojinLee/street.jpg",
+    "userid": "jinny",
+    "comment": "창문이 알록달록"
+  },
+
+  {
+    "id": 2,
+    "img": "/images/sojinLee/street.jpg",
+    "userid": "You&I",
+    "comment": "창문이 멋지네요"
+  }
+]

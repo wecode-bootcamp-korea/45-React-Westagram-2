@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Main.scss';
 
 const Comment = props => {
@@ -14,6 +14,15 @@ const Comment = props => {
 const Main = () => {
   const [comment, setComment] = useState([]);
   const [newcomment, setNewcomment] = useState('');
+  const [newReply, setNewReply] = useState([]);
+
+  useEffect(() => {
+    fetch('/data/data.json')
+      .then(res => res.json())
+      .then(data => {
+        setNewReply(data);
+      });
+  }, []);
 
   const AddcomentHandler = event => {
     event.preventDefault();
@@ -30,6 +39,7 @@ const Main = () => {
       setNewcomment('');
     }
   };
+
   return (
     <>
       <div className="topmenu">
@@ -161,6 +171,87 @@ const Main = () => {
                 게시
               </button>
             </div>
+            <div className="info">
+              <img
+                className="food"
+                src="/images/sojinLee/food.jpg"
+                alt="음식"
+              />
+              <h5>sojin</h5>
+            </div>
+            <div className="feeds">
+              <img
+                className="street"
+                src="/images/sojinLee/street.jpg"
+                alt="거리"
+              />
+            </div>
+            <div className="likefeeds">
+              <img
+                className="like"
+                src="/images/sojinLee/instagramheart.png"
+                alt="좋아요"
+              />
+              <img
+                className="reply"
+                src="/images/sojinLee/instagramreply.png"
+                alt="댓글"
+              />
+              <img
+                className="message"
+                src="/images/sojinLee/instagramDM.png"
+                alt="DM"
+              />
+            </div>
+            <div className="replyfeeds">
+              <div className="imagefeeds">
+                <img
+                  className="dog"
+                  src="/images/sojinLee/dog.jpg"
+                  alt="강아지"
+                />
+                <h5>ZzangGu님 외 여러명이 좋아합니다.</h5>
+              </div>
+              <div className="replycontents">
+                <div className="replycontents">
+                  <div className="replycontents">
+                    {comment.map(comment => (
+                      <Comment
+                        key={comment.id}
+                        userid={comment.userid}
+                        comment={comment.comment}
+                      />
+                    ))}
+                    {/*key 속성은 리액트에서 리스트를 렌더링할 때 각 아이템을 식별하는 역할을 함 */}
+                  </div>
+                </div>
+              </div>
+              <input
+                className="replywrite"
+                placeholder=""
+                size="30"
+                value={newcomment}
+                onChange={event => setNewcomment(event.target.value)}
+                onKeyDown={event => {
+                  if (event.key === 'Enter') {
+                    AddcomentHandler(event);
+                  }
+                }}
+              />
+              <button
+                className="replybtn"
+                type="button"
+                onClick={AddcomentHandler}
+              >
+                게시
+              </button>
+            </div>
+            {newReply.map(reply => (
+              <div key={reply.id}>
+                <span>{reply.userid}</span>
+                <p>{reply.comment}</p>
+              </div>
+            ))}
           </div>
         </article>
       </main>
