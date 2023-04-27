@@ -1,0 +1,225 @@
+@import '../../../styles/common';
+
+.comment {
+  text-align: center;
+}
+
+.topmenu {
+  display: flex;
+  justify-content: space-between;
+  height: 150px;
+  margin-top: 25px;
+  margin-right: 50px;
+  margin-left: 50px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 10px;
+  text-align: center;
+
+  .logoimg {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 360px;
+    margin: 5px;
+  }
+
+  .instalogo {
+    height: 40px;
+    margin-top: 5px;
+    margin-left: 80px;
+    float: left;
+    border-right: 1px solid black;
+  }
+
+  .search {
+    height: 50px;
+    margin-top: 50px;
+    margin-right: 15px;
+    border-width: 2px;
+    border-radius: 5px;
+    font-size: 40px;
+    text-align: center;
+    vertical-align: top;
+  }
+}
+
+.rightmenu {
+  margin: 5px;
+
+  .circinus,
+  .heart,
+  .person {
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    margin-top: 50px;
+    margin-right: 40px;
+    float: right;
+  }
+}
+
+.rightside {
+  display: flex;
+  justify-content: right;
+  margin-right: -250px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+
+  .streetside {
+    width: 45px;
+    height: 45px;
+    margin-top: 55px;
+    margin-right: 10px;
+    border-width: thin;
+    border-style: solid;
+    border-radius: 30px;
+    border-color: black;
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+    margin-right: -120px;
+  }
+  .wesid {
+    margin-top: 10px;
+    margin-right: 30px;
+    font-size: 30px;
+  }
+
+  .rightaside {
+    margin-top: 110px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 17px;
+  }
+
+  li {
+    display: inline-block;
+    margin: 2px;
+  }
+}
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 50%;
+  height: 90px;
+  margin-top: -60px;
+  margin-bottom: 0px;
+  margin-left: 170px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 10px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+
+  .food {
+    height: 55px;
+    margin: 15px;
+    border-width: thin;
+    border-style: solid;
+    border-radius: 30px;
+    border-color: black;
+  }
+}
+
+.feeds {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 50%;
+  height: 700px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 170px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 10px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+
+  .street {
+    width: 640px;
+    height: 600px;
+    margin-top: 10px;
+    margin-right: 50px;
+    margin-left: 90px;
+  }
+}
+
+.likefeeds {
+  width: 50%;
+  height: 70px;
+  margin-left: 170px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 10px;
+  text-align: left;
+
+  .like,
+  .reply,
+  .message {
+    height: 40px;
+    margin: 5px;
+    margin-top: 10px;
+  }
+}
+
+.replyfeeds {
+  width: 50%;
+  height: 150px;
+  margin-bottom: 90px;
+  margin-left: 170px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 10px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+
+  .imagefeeds {
+    display: flex;
+    justify-content: left;
+    margin-top: 5px;
+    text-align: left;
+  }
+  .dog {
+    height: 35px;
+    margin: 5px;
+    border-width: thin;
+    border-style: solid;
+    border-radius: 30px;
+    border-color: black;
+  }
+}
+.replycontents {
+  max-width: 300px;
+  margin-left: -180px;
+  padding-left: 190px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 13px;
+  overflow-wrap: break-word; // 단어가 줄 바꿈될 수 있는 지점에서만 줄 바꿈을 수행
+  white-space: nowrap; // 텍스트 노드의 줄바꿈 없이, 한 줄로 모두 표시
+}
+.replywrite {
+  height: 30px;
+  margin-top: 30px;
+  margin-left: -475px;
+}
+
+.replybtn {
+  width: 50px;
+  height: 30px;
+  margin-top: 0px;
+  border: none;
+  background-color: white;
+  color: blue;
+  font-size: 5px;
+  cursor: pointer;
+}
+
+body {
+  position: top;
+  font-family: 'Lobster', cursive;
+  font-size: 40px;
+}
